@@ -14,7 +14,20 @@ cd my-app
 rm -rf .git && git init
 ```
 
-### 2. Configure Environment
+### 2. Configure GitHub Packages Authentication
+
+The SDK packages are hosted on GitHub Packages. Add your GitHub token to `~/.npmrc`:
+
+```bash
+echo "//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN" >> ~/.npmrc
+```
+
+To create a token:
+1. Go to GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)
+2. Generate new token with `read:packages` scope
+3. Copy the token and use it in the command above
+
+### 3. Configure Environment
 
 Copy the example environment file and fill in your values:
 
@@ -24,16 +37,15 @@ cp .env.example .env.local
 
 Required variables:
 - `DATABASE_URL` - Your platform database connection string
-- `GITHUB_TOKEN` - Personal access token with `read:packages` scope
 - `PLATFORM_URL` - Platform URL (default: https://madebykav.com)
 
-### 3. Install Dependencies
+### 4. Install Dependencies
 
 ```bash
 pnpm install
 ```
 
-### 4. Run Development Server
+### 5. Run Development Server
 
 ```bash
 pnpm dev
