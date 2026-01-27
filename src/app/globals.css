@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "@madebykav/ui/globals.css";
+
+/* App-specific theme overrides (optional) */
+@theme inline {
+  /* Override brand colors if needed */
+  /* --color-brand: oklch(60% 0.25 12); */
+
+  /* Override fonts if needed */
+  /* --font-sans: "Your Font", sans-serif; */
+}
+
+/* App-specific global styles */
+body {
+  @apply bg-background text-foreground antialiased;
+}
