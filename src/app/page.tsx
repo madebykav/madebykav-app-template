@@ -11,7 +11,7 @@ export default async function DashboardPage() {
   // All queries through withTenant() are automatically filtered by tenant
   let items: { id: string; title: string; status: string }[] = []
 
-  if (auth.tenantId) {
+  if (auth?.tenantId) {
     items = await withTenant(db, auth.tenantId, async (tx) => {
       return tx.select({
         id: exampleItems.id,
@@ -38,19 +38,19 @@ export default async function DashboardPage() {
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
               <span className="text-muted-foreground">Tenant ID:</span>
-              <p className="font-mono">{auth.tenantId || 'Not authenticated'}</p>
+              <p className="font-mono">{auth?.tenantId || 'Not set'}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">App Slug:</span>
+              <p className="font-mono">{auth?.appSlug || 'Not set'}</p>
             </div>
             <div>
               <span className="text-muted-foreground">User ID:</span>
-              <p className="font-mono">{auth.userId || 'Not authenticated'}</p>
+              <p className="font-mono">{auth?.userId || 'Not authenticated'}</p>
             </div>
             <div>
-              <span className="text-muted-foreground">Session:</span>
-              <p className="font-mono">{auth.session ? 'Active' : 'None'}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">User:</span>
-              <p className="font-mono">{auth.user?.email || 'N/A'}</p>
+              <span className="text-muted-foreground">Status:</span>
+              <p className="font-mono">{auth ? 'Connected' : 'Standalone'}</p>
             </div>
           </div>
         </Card>
