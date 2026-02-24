@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. globals.css uses `@import "tailwindcss"` with `@source` directive for SDK component scanning, and tailwind.config.ts is deleted
   4. next.config.ts includes `output: 'standalone'` and @madebykav/ai is removed from transpilePackages
   5. .env.example contains clear documentation with dev defaults
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Dependencies, next.config.ts, and .env.example
+- [ ] 01-02-PLAN.md -- Schema declarative RLS, db/index.ts cleanup, Tailwind v4 CSS migration
 
 ### Phase 2: Docker & Health Probes
 **Goal**: Developer can run `./dev.sh` to go from clone to running app with local postgres, and the app exposes working health probes for container orchestration
@@ -85,7 +85,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/0 | Not started | - |
+| 1. Foundation | 0/2 | Planned | - |
 | 2. Docker & Health Probes | 0/0 | Not started | - |
 | 3. App Code & CI/CD | 0/0 | Not started | - |
 | 4. Documentation | 0/0 | Not started | - |
