@@ -9,13 +9,13 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### Dependencies
 
-- [ ] **DEPS-01**: Update drizzle-orm from ^0.38.4 to ^0.45.0 (required by @madebykav/db peer dep)
-- [ ] **DEPS-02**: Pin @madebykav/auth to ^0.2.0 (breaking change to AuthContext type)
-- [ ] **DEPS-03**: Pin @madebykav/db to ^0.1.0
-- [ ] **DEPS-04**: Pin @madebykav/ui to ^0.1.2
-- [ ] **DEPS-05**: Remove @madebykav/ai from dependencies
-- [ ] **DEPS-06**: Add `output: 'standalone'` to next.config.ts
-- [ ] **DEPS-07**: Remove @madebykav/ai from transpilePackages in next.config.ts
+- [x] **DEPS-01**: Update drizzle-orm from ^0.38.4 to ^0.45.0 (required by @madebykav/db peer dep)
+- [x] **DEPS-02**: Pin @madebykav/auth to ^0.2.0 (breaking change to AuthContext type)
+- [x] **DEPS-03**: Pin @madebykav/db to ^0.1.0
+- [x] **DEPS-04**: Pin @madebykav/ui to ^0.1.2
+- [x] **DEPS-05**: Remove @madebykav/ai from dependencies
+- [x] **DEPS-06**: Add `output: 'standalone'` to next.config.ts
+- [x] **DEPS-07**: Remove @madebykav/ai from transpilePackages in next.config.ts
 
 ### Schema & Database
 
@@ -50,7 +50,7 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### Documentation
 
-- [ ] **DOCS-01**: Update .env.example with clearer documentation, dev defaults, and app identity vars
+- [x] **DOCS-01**: Update .env.example with clearer documentation, dev defaults, and app identity vars
 - [ ] **DOCS-02**: Rewrite CLAUDE.md with updated SDK docs (AuthContext v0.2.0), patterns, architecture context, commands, and things to avoid
 - [ ] **DOCS-03**: Rewrite README.md with quick start, deployment (Docker + Vercel), project structure, and SDK table
 - [ ] **DOCS-04**: Generate Sonner/Toast brief for platform dev (@madebykav/ui SDK addition request)
@@ -92,13 +92,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DEPS-01 | Phase 1 | Pending |
-| DEPS-02 | Phase 1 | Pending |
-| DEPS-03 | Phase 1 | Pending |
-| DEPS-04 | Phase 1 | Pending |
-| DEPS-05 | Phase 1 | Pending |
-| DEPS-06 | Phase 1 | Pending |
-| DEPS-07 | Phase 1 | Pending |
+| DEPS-01 | Phase 1 | Complete |
+| DEPS-02 | Phase 1 | Complete |
+| DEPS-03 | Phase 1 | Complete |
+| DEPS-04 | Phase 1 | Complete |
+| DEPS-05 | Phase 1 | Complete |
+| DEPS-06 | Phase 1 | Complete |
+| DEPS-07 | Phase 1 | Complete |
 | SCHM-01 | Phase 1 | Pending |
 | SCHM-02 | Phase 1 | Pending |
 | SCHM-03 | Phase 1 | Pending |
@@ -115,7 +115,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOCK-03 | Phase 2 | Pending |
 | DOCK-04 | Phase 2 | Pending |
 | CICD-01 | Phase 3 | Pending |
-| DOCS-01 | Phase 1 | Pending |
+| DOCS-01 | Phase 1 | Complete |
 | DOCS-02 | Phase 4 | Pending |
 | DOCS-03 | Phase 4 | Pending |
 | DOCS-04 | Phase 4 | Pending |
