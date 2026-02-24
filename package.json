@@ -11,14 +11,13 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@madebykav/auth": "latest",
-    "@madebykav/db": "latest",
-    "@madebykav/ui": "latest",
-    "@madebykav/ai": "latest",
+    "@madebykav/auth": "^0.2.0",
+    "@madebykav/db": "^0.1.0",
+    "@madebykav/ui": "^0.1.2",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "drizzle-orm": "^0.38.4",
+    "drizzle-orm": "^0.45.0",
     "postgres": "^3.4.5"
   },
   "devDependencies": {
