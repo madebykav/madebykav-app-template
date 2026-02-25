@@ -44,7 +44,7 @@ Plans:
   2. `docker build` produces a working standalone image using multi-stage build with non-root user
   3. GET /api/health returns {"status":"ok"} (liveness), and GET /api/health/ready returns {"status":"ready"} or 503 with DB check (readiness)
   4. docker-compose.yml provides a dev-profile postgres service, and .dockerignore excludes node_modules, .next, .git, .env*, *.md, drizzle/
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 02-01-PLAN.md -- Docker infrastructure (Dockerfile, .dockerignore, docker-compose.yml, public/.gitkeep)
