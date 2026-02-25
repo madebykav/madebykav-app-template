@@ -33,16 +33,16 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### Health & Auth
 
-- [ ] **HLTH-01**: Create liveness probe at /api/health returning {"status":"ok"}
-- [ ] **HLTH-02**: Create readiness probe at /api/health/ready (checks DB with SELECT 1, returns 503 if unreachable)
+- [x] **HLTH-01**: Create liveness probe at /api/health returning {"status":"ok"}
+- [x] **HLTH-02**: Create readiness probe at /api/health/ready (checks DB with SELECT 1, returns 503 if unreachable)
 - [ ] **AUTH-01**: Create logout server action (redirects to platform /logout endpoint)
 
 ### Docker Infrastructure
 
-- [ ] **DOCK-01**: Create multi-stage Dockerfile (base/deps/builder/runner with standalone output, non-root user, HEALTHCHECK)
-- [ ] **DOCK-02**: Create .dockerignore (exclude node_modules, .next, .git, .env*, *.md, drizzle/)
-- [ ] **DOCK-03**: Create docker-compose.yml (local dev postgres on port 5433 with dev profile)
-- [ ] **DOCK-04**: Create dev.sh script (start postgres, wait for readiness, push schema, run dev server)
+- [x] **DOCK-01**: Create multi-stage Dockerfile (base/deps/builder/runner with standalone output, non-root user, HEALTHCHECK)
+- [x] **DOCK-02**: Create .dockerignore (exclude node_modules, .next, .git, .env*, *.md, drizzle/)
+- [x] **DOCK-03**: Create docker-compose.yml (local dev postgres on port 5433 with dev profile)
+- [x] **DOCK-04**: Create dev.sh script (start postgres, wait for readiness, push schema, run dev server)
 
 ### CI/CD
 
@@ -107,13 +107,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | APP-03 | Phase 3 | Pending |
 | APP-04 | Phase 1 | Complete |
 | APP-05 | Phase 1 | Complete |
-| HLTH-01 | Phase 2 | Pending |
-| HLTH-02 | Phase 2 | Pending |
+| HLTH-01 | Phase 2 | Complete |
+| HLTH-02 | Phase 2 | Complete |
 | AUTH-01 | Phase 3 | Pending |
-| DOCK-01 | Phase 2 | Pending |
-| DOCK-02 | Phase 2 | Pending |
-| DOCK-03 | Phase 2 | Pending |
-| DOCK-04 | Phase 2 | Pending |
+| DOCK-01 | Phase 2 | Complete |
+| DOCK-02 | Phase 2 | Complete |
+| DOCK-03 | Phase 2 | Complete |
+| DOCK-04 | Phase 2 | Complete |
 | CICD-01 | Phase 3 | Pending |
 | DOCS-01 | Phase 1 | Complete |
 | DOCS-02 | Phase 4 | Pending |

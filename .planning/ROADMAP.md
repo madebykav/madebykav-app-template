@@ -47,8 +47,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Docker infrastructure (Dockerfile, .dockerignore, docker-compose.yml, public/.gitkeep)
-- [ ] 02-02-PLAN.md -- Health probes and dev.sh (liveness, readiness, one-command setup)
+- [x] 02-01-PLAN.md -- Docker infrastructure (Dockerfile, .dockerignore, docker-compose.yml, public/.gitkeep)
+- [x] 02-02-PLAN.md -- Health probes and dev.sh (liveness, readiness, one-command setup)
 
 ### Phase 3: App Code & CI/CD
 **Goal**: App code reflects auth SDK v0.2.0 breaking changes, logout works, and pushing to main triggers automated Docker image build and push to GHCR
@@ -86,6 +86,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-02-25 |
-| 2. Docker & Health Probes | 0/2 | Planned | - |
+| 2. Docker & Health Probes | 2/2 | Complete | 2026-02-25 |
 | 3. App Code & CI/CD | 0/0 | Not started | - |
 | 4. Documentation | 0/0 | Not started | - |
