@@ -73,10 +73,11 @@ Plans:
   1. CLAUDE.md documents updated SDK patterns (AuthContext v0.2.0 shape, withTenant imports from @madebykav/db), Docker commands, declarative RLS, and health probe endpoints
   2. README.md includes quick start (clone + dev.sh), Docker deployment instructions, project structure, and SDK version table
   3. Sonner/Toast brief exists as a spec document for platform dev to add toast notifications to @madebykav/ui SDK
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md -- CLAUDE.md and README.md full rewrites (v2 patterns, Docker, health probes)
+- [ ] 04-02-PLAN.md -- Sonner/Toast specification brief for @madebykav/ui SDK
 
 ## Progress
 
@@ -88,4 +89,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation | 2/2 | Complete    | 2026-02-25 |
 | 2. Docker & Health Probes | 2/2 | Complete | 2026-02-25 |
 | 3. App Code & CI/CD | 2/2 | Complete    | 2026-02-25 |
-| 4. Documentation | 0/0 | Not started | - |
+| 4. Documentation | 0/2 | Planned | - |
