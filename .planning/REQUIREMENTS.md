@@ -19,17 +19,17 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### Schema & Database
 
-- [ ] **SCHM-01**: Add pgPolicy() declarative RLS to schema.ts using createTenantPolicy()
-- [ ] **SCHM-02**: Remove SDK re-exports (withTenant, withoutRLS) from db/index.ts
-- [ ] **SCHM-03**: Update all withTenant imports to use @madebykav/db directly
+- [x] **SCHM-01**: Add pgPolicy() declarative RLS to schema.ts using createTenantPolicy()
+- [x] **SCHM-02**: Remove SDK re-exports (withTenant, withoutRLS) from db/index.ts
+- [x] **SCHM-03**: Update all withTenant imports to use @madebykav/db directly
 
 ### App Code
 
 - [ ] **APP-01**: Remove getAuthContext() call from root layout.tsx (forces every page dynamic)
 - [ ] **APP-02**: Update page.tsx to new AuthContext shape (null check, auth.name, auth.email, auth.role, auth.tenantSlug)
 - [ ] **APP-03**: Update API example route with NewExampleItem type usage
-- [ ] **APP-04**: Add @source directive to globals.css for Tailwind v4 SDK class scanning
-- [ ] **APP-05**: Delete tailwind.config.ts (Tailwind v4 uses CSS-based config)
+- [x] **APP-04**: Add @source directive to globals.css for Tailwind v4 SDK class scanning
+- [x] **APP-05**: Delete tailwind.config.ts (Tailwind v4 uses CSS-based config)
 
 ### Health & Auth
 
@@ -99,14 +99,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DEPS-05 | Phase 1 | Complete |
 | DEPS-06 | Phase 1 | Complete |
 | DEPS-07 | Phase 1 | Complete |
-| SCHM-01 | Phase 1 | Pending |
-| SCHM-02 | Phase 1 | Pending |
-| SCHM-03 | Phase 1 | Pending |
+| SCHM-01 | Phase 1 | Complete |
+| SCHM-02 | Phase 1 | Complete |
+| SCHM-03 | Phase 1 | Complete |
 | APP-01 | Phase 3 | Pending |
 | APP-02 | Phase 3 | Pending |
 | APP-03 | Phase 3 | Pending |
-| APP-04 | Phase 1 | Pending |
-| APP-05 | Phase 1 | Pending |
+| APP-04 | Phase 1 | Complete |
+| APP-05 | Phase 1 | Complete |
 | HLTH-01 | Phase 2 | Pending |
 | HLTH-02 | Phase 2 | Pending |
 | AUTH-01 | Phase 3 | Pending |

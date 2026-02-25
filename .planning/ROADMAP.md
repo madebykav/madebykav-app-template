@@ -12,7 +12,7 @@ This roadmap delivers the v2 update of the MadeByKav app template in four phases
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Update dependencies, schema with declarative RLS, Tailwind v4 migration, and next.config.ts
+- [x] **Phase 1: Foundation** - Update dependencies, schema with declarative RLS, Tailwind v4 migration, and next.config.ts
 - [ ] **Phase 2: Docker & Health Probes** - Dockerfile, docker-compose, dev.sh, and health probe endpoints
 - [ ] **Phase 3: App Code & CI/CD** - Rewrite layout/page/API for auth v0.2.0, add logout action, create CI/CD pipeline
 - [ ] **Phase 4: Documentation** - Rewrite CLAUDE.md, README.md, and generate Toast/Sonner brief
@@ -32,8 +32,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Dependencies, next.config.ts, and .env.example
-- [ ] 01-02-PLAN.md -- Schema declarative RLS, db/index.ts cleanup, Tailwind v4 CSS migration
+- [x] 01-01-PLAN.md -- Dependencies, next.config.ts, and .env.example
+- [x] 01-02-PLAN.md -- Schema declarative RLS, db/index.ts cleanup, Tailwind v4 CSS migration
 
 ### Phase 2: Docker & Health Probes
 **Goal**: Developer can run `./dev.sh` to go from clone to running app with local postgres, and the app exposes working health probes for container orchestration
@@ -85,7 +85,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Planned | - |
+| 1. Foundation | 2/2 | Complete | 2026-02-25 |
 | 2. Docker & Health Probes | 0/0 | Not started | - |
 | 3. App Code & CI/CD | 0/0 | Not started | - |
 | 4. Documentation | 0/0 | Not started | - |
