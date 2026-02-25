@@ -44,11 +44,11 @@ Plans:
   2. `docker build` produces a working standalone image using multi-stage build with non-root user
   3. GET /api/health returns {"status":"ok"} (liveness), and GET /api/health/ready returns {"status":"ready"} or 503 with DB check (readiness)
   4. docker-compose.yml provides a dev-profile postgres service, and .dockerignore excludes node_modules, .next, .git, .env*, *.md, drizzle/
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md -- Docker infrastructure (Dockerfile, .dockerignore, docker-compose.yml, public/.gitkeep)
+- [ ] 02-02-PLAN.md -- Health probes and dev.sh (liveness, readiness, one-command setup)
 
 ### Phase 3: App Code & CI/CD
 **Goal**: App code reflects auth SDK v0.2.0 breaking changes, logout works, and pushing to main triggers automated Docker image build and push to GHCR
@@ -86,6 +86,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-02-25 |
-| 2. Docker & Health Probes | 0/0 | Not started | - |
+| 2. Docker & Health Probes | 0/2 | Planned | - |
 | 3. App Code & CI/CD | 0/0 | Not started | - |
 | 4. Documentation | 0/0 | Not started | - |
