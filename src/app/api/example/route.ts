@@ -40,14 +40,12 @@ export async function POST(request: NextRequest) {
 
   // Insert with tenant ID automatically included
   const [item] = await withTenant(db, auth.tenantId, async (tx) => {
-    const newItem: NewExampleItem = {
+    return tx.insert(exampleItems).values({
       tenantId: auth.tenantId,
       title,
       description,
       priority: priority ?? 0,
-    }
-
-    return tx.insert(exampleItems).values(newItem).returning()
+    } satisfies NewExampleItem).returning()
   })
 
   return NextResponse.json({ item }, { status: 201 })
