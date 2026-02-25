@@ -77,7 +77,7 @@ Plans:
 
 Plans:
 - [ ] 04-01-PLAN.md -- CLAUDE.md and README.md full rewrites (v2 patterns, Docker, health probes)
-- [ ] 04-02-PLAN.md -- Sonner/Toast specification brief for @madebykav/ui SDK
+- [x] 04-02-PLAN.md -- Sonner/Toast specification brief for @madebykav/ui SDK
 
 ## Progress
 
@@ -89,4 +89,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 1. Foundation | 2/2 | Complete    | 2026-02-25 |
 | 2. Docker & Health Probes | 2/2 | Complete | 2026-02-25 |
 | 3. App Code & CI/CD | 2/2 | Complete    | 2026-02-25 |
-| 4. Documentation | 0/2 | Planned | - |
+| 4. Documentation | 1/2 | In Progress | - |

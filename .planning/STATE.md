@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-18)
 
 **Core value:** A developer can go from `git clone` to a running, tenant-isolated app in one command (`./dev.sh`), and from `git push` to a deployed Docker container via CI/CD -- with correct auth, RLS, and health probes out of the box.
-**Current focus:** Phase 3: App Code & CI/CD
+**Current focus:** Phase 4: Documentation
 
 ## Current Position
 
-Phase: 3 of 4 (App Code & CI/CD) -- COMPLETE
-Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase 3 Complete
-Last activity: 2026-02-25 -- Completed 03-02-PLAN.md (API satisfies pattern and Docker CI/CD)
+Phase: 4 of 4 (Documentation) -- IN PROGRESS
+Plan: 2 of 2 in current phase -- 04-02-PLAN.md COMPLETE
+Status: Phase 4 In Progress (Plan 01 remaining)
+Last activity: 2026-02-25 -- Completed 04-02-PLAN.md (Sonner/Toast specification brief)
 
-Progress: [██████░░░░] 60%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 1.2min
-- Total execution time: 0.12 hours
+- Total plans completed: 7
+- Average duration: 1.1min
+- Total execution time: 0.13 hours
 
 **By Phase:**
 
@@ -33,9 +33,10 @@ Progress: [██████░░░░] 60%
 | Phase 02 P02 | 1min | 2 tasks | 3 files |
 | Phase 03 P01 | 1min | 2 tasks | 3 files |
 | Phase 03 P02 | 1min | 2 tasks | 2 files |
+| Phase 04 P02 | 1min | 1 tasks | 1 files |
 
 **Recent Trend:**
-- Last 5 plans: 2min, 1min, 1min, 1min
+- Last 5 plans: 1min, 1min, 1min, 1min, 1min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -66,6 +67,8 @@ Recent decisions affecting current work:
 - [Phase 03]: Synchronous root layout -- pages call getAuthContext() individually for static optimization
 - [Phase 03]: satisfies operator replaces intermediate typed variable for stricter excess-property checking
 - [Phase 03]: BuildKit secrets input (not build-args) in CI/CD workflow matches Dockerfile --mount=type=secret pattern
+- [Phase 04]: Sonner as direct dependency of @madebykav/ui, not peer dependency
+- [Phase 04]: CSS variable integration via --normal-bg/text/border mapping to platform tokens
 
 ### Pending Todos
 
@@ -79,5 +82,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 03-02-PLAN.md (Phase 3 Complete)
-Resume file: .planning/phases/03-app-code-cicd/03-02-SUMMARY.md
+Stopped at: Completed 04-02-PLAN.md (Sonner/Toast brief)
+Resume file: .planning/phases/04-documentation/04-02-SUMMARY.md

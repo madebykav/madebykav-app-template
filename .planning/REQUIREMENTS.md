@@ -53,7 +53,7 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 - [x] **DOCS-01**: Update .env.example with clearer documentation, dev defaults, and app identity vars
 - [ ] **DOCS-02**: Rewrite CLAUDE.md with updated SDK docs (AuthContext v0.2.0), patterns, architecture context, commands, and things to avoid
 - [ ] **DOCS-03**: Rewrite README.md with quick start, deployment (Docker + Vercel), project structure, and SDK table
-- [ ] **DOCS-04**: Generate Sonner/Toast brief for platform dev (@madebykav/ui SDK addition request)
+- [x] **DOCS-04**: Generate Sonner/Toast brief for platform dev (@madebykav/ui SDK addition request)
 
 ## v2 Requirements
 
@@ -118,7 +118,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DOCS-01 | Phase 1 | Complete |
 | DOCS-02 | Phase 4 | Pending |
 | DOCS-03 | Phase 4 | Pending |
-| DOCS-04 | Phase 4 | Pending |
+| DOCS-04 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 27 total
