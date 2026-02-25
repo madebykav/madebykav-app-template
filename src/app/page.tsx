@@ -41,8 +41,8 @@ export default async function DashboardPage() {
               <p className="font-mono">{auth?.tenantId || 'Not set'}</p>
             </div>
             <div>
-              <span className="text-muted-foreground">App Slug:</span>
-              <p className="font-mono">{auth?.appSlug || 'Not set'}</p>
+              <span className="text-muted-foreground">Tenant Slug:</span>
+              <p className="font-mono">{auth?.tenantSlug || 'Not set'}</p>
             </div>
             <div>
               <span className="text-muted-foreground">User ID:</span>
