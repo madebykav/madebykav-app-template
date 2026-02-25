@@ -1,25 +1,32 @@
 import { getAuthContext } from '@madebykav/auth'
+import { withTenant } from '@madebykav/db'
 import { Button, Card } from '@madebykav/ui'
 import { db } from '@/lib/db'
-import { withTenant } from '@madebykav/db'
 import { exampleItems } from '@/lib/db/schema'
 
 export default async function DashboardPage() {
   const auth = await getAuthContext()
 
-  // Example: Query with tenant isolation
-  // All queries through withTenant() are automatically filtered by tenant
-  let items: { id: string; title: string; status: string }[] = []
-
-  if (auth?.tenantId) {
-    items = await withTenant(db, auth.tenantId, async (tx) => {
-      return tx.select({
-        id: exampleItems.id,
-        title: exampleItems.title,
-        status: exampleItems.status,
-      }).from(exampleItems).limit(5)
-    })
+  if (!auth) {
+    return (
+      <main className="container mx-auto p-8">
+        <Card className="p-6">
+          <h2 className="text-xl font-semibold mb-2">Not Authenticated</h2>
+          <p className="text-muted-foreground">
+            Please log in through the platform portal.
+          </p>
+        </Card>
+      </main>
+    )
   }
+
+  const items = await withTenant(db, auth.tenantId, async (tx) => {
+    return tx.select({
+      id: exampleItems.id,
+      title: exampleItems.title,
+      status: exampleItems.status,
+    }).from(exampleItems).limit(5)
+  })
 
   return (
     <main className="container mx-auto p-8">
@@ -28,29 +35,29 @@ export default async function DashboardPage() {
         <div>
           <h1 className="text-3xl font-bold">Dashboard</h1>
           <p className="text-muted-foreground mt-2">
-            Welcome to your app template
+            Welcome, {auth.name || auth.email}
           </p>
         </div>
 
-        {/* Auth Context Card */}
+        {/* Auth Context */}
         <Card className="p-6">
           <h2 className="text-xl font-semibold mb-4">Authentication Context</h2>
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div>
-              <span className="text-muted-foreground">Tenant ID:</span>
-              <p className="font-mono">{auth?.tenantId || 'Not set'}</p>
+              <span className="text-muted-foreground">Tenant:</span>
+              <p className="font-mono">{auth.tenantSlug}</p>
             </div>
             <div>
-              <span className="text-muted-foreground">Tenant Slug:</span>
-              <p className="font-mono">{auth?.tenantSlug || 'Not set'}</p>
+              <span className="text-muted-foreground">Role:</span>
+              <p className="font-mono">{auth.role}</p>
+            </div>
+            <div>
+              <span className="text-muted-foreground">User:</span>
+              <p className="font-mono">{auth.email}</p>
             </div>
             <div>
               <span className="text-muted-foreground">User ID:</span>
-              <p className="font-mono">{auth?.userId || 'Not authenticated'}</p>
-            </div>
-            <div>
-              <span className="text-muted-foreground">Status:</span>
-              <p className="font-mono">{auth ? 'Connected' : 'Standalone'}</p>
+              <p className="font-mono text-xs">{auth.userId}</p>
             </div>
           </div>
         </Card>
