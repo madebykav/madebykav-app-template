@@ -1,19 +1,13 @@
-import { pgTable, uuid, text, timestamp, integer } from 'drizzle-orm/pg-core'
-import { tenantRlsPolicy } from '@madebykav/db'
+import { pgTable, pgPolicy, uuid, text, timestamp, integer } from 'drizzle-orm/pg-core'
+import { createTenantPolicy } from '@madebykav/db'
 
 /**
- * Example table demonstrating the tenant isolation pattern.
+ * Example table with declarative RLS.
  *
  * Key patterns:
- * 1. All app tables include tenant_id column for RLS
- * 2. Use tenantRlsPolicy() helper to apply RLS in migrations
- * 3. Prefix table names with your app slug (e.g., example_items)
- * 4. Always query through withTenant() for automatic filtering
- *
- * To apply RLS policy after pushing schema:
- * ```sql
- * SELECT create_tenant_policy('example_items');
- * ```
+ * 1. Every table has a tenant_id column (multiple tenants use the same app)
+ * 2. RLS policy defined in the schema via pgPolicy() + createTenantPolicy()
+ * 3. Always query through withTenant() from @madebykav/db
  */
 export const exampleItems = pgTable('example_items', {
   id: uuid('id').defaultRandom().primaryKey(),
@@ -24,19 +18,9 @@ export const exampleItems = pgTable('example_items', {
   priority: integer('priority').default(0),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
-})
+}, (table) => [
+  pgPolicy('example_items_tenant_isolation', createTenantPolicy()),
+])
 
-// Export types for use in application code
 export type ExampleItem = typeof exampleItems.$inferSelect
 export type NewExampleItem = typeof exampleItems.$inferInsert
-
-/**
- * Apply RLS policy to your tables after db:push:
- *
- * ```ts
- * import { tenantRlsPolicy } from '@madebykav/db'
- *
- * // In a migration or setup script:
- * await db.execute(tenantRlsPolicy('example_items'))
- * ```
- */
