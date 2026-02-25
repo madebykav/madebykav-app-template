@@ -59,11 +59,11 @@ Plans:
   2. page.tsx uses new AuthContext shape (null check, auth.name, auth.email, auth.role, auth.tenantSlug) and displays user identity fields
   3. Logout server action redirects to platform /logout endpoint
   4. GitHub Actions workflow (docker-publish.yml) builds Docker image and pushes to GHCR on push to main, with SHA + latest tags
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- App code auth v0.2.0 updates (layout, page, logout action)
+- [ ] 03-02-PLAN.md -- API route satisfies pattern and CI/CD Docker publishing workflow
 
 ### Phase 4: Documentation
 **Goal**: CLAUDE.md and README.md fully reflect the v2 template state so developers and AI assistants have accurate, complete guidance
