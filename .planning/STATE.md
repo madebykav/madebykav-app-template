@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-18)
 
 **Core value:** A developer can go from `git clone` to a running, tenant-isolated app in one command (`./dev.sh`), and from `git push` to a deployed Docker container via CI/CD -- with correct auth, RLS, and health probes out of the box.
-**Current focus:** Phase 2: Docker & Health Probes
+**Current focus:** Phase 3: App Code & CI/CD
 
 ## Current Position
 
-Phase: 2 of 4 (Docker & Health Probes) -- COMPLETE
+Phase: 3 of 4 (App Code & CI/CD) -- COMPLETE
 Plan: 2 of 2 in current phase -- COMPLETE
-Status: Phase 2 Complete
-Last activity: 2026-02-25 -- Completed 02-02-PLAN.md (health probes and dev script)
+Status: Phase 3 Complete
+Last activity: 2026-02-25 -- Completed 03-02-PLAN.md (API satisfies pattern and Docker CI/CD)
 
-Progress: [████░░░░░░] 40%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 1.3min
-- Total execution time: 0.08 hours
+- Total plans completed: 6
+- Average duration: 1.2min
+- Total execution time: 0.12 hours
 
 **By Phase:**
 
@@ -31,9 +31,11 @@ Progress: [████░░░░░░] 40%
 | Phase 01 P02 | 2min | 2 tasks | 4 files |
 | Phase 02 P01 | 1min | 2 tasks | 4 files |
 | Phase 02 P02 | 1min | 2 tasks | 3 files |
+| Phase 03 P01 | 1min | 2 tasks | 3 files |
+| Phase 03 P02 | 1min | 2 tasks | 2 files |
 
 **Recent Trend:**
-- Last 5 plans: 1min, 2min, 1min, 1min
+- Last 5 plans: 2min, 1min, 1min, 1min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -60,6 +62,10 @@ Recent decisions affecting current work:
 - [Phase 02]: No auth on health probes -- container orchestration needs unrestricted access
 - [Phase 02]: Liveness probe does NOT check DB -- prevents restart loops when DB is down
 - [Phase 02]: exec pnpm dev replaces shell process for clean signal handling in dev.sh
+- [Phase 03]: Null-check guard pattern (if (!auth) return) replaces optional chaining for v0.2.0 AuthContext
+- [Phase 03]: Synchronous root layout -- pages call getAuthContext() individually for static optimization
+- [Phase 03]: satisfies operator replaces intermediate typed variable for stricter excess-property checking
+- [Phase 03]: BuildKit secrets input (not build-args) in CI/CD workflow matches Dockerfile --mount=type=secret pattern
 
 ### Pending Todos
 
@@ -73,5 +79,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-25
-Stopped at: Completed 02-02-PLAN.md (Phase 2 complete)
-Resume file: .planning/phases/02-docker-health-probes/02-02-SUMMARY.md
+Stopped at: Completed 03-02-PLAN.md (Phase 3 Complete)
+Resume file: .planning/phases/03-app-code-cicd/03-02-SUMMARY.md

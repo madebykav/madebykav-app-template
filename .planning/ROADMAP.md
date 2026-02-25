@@ -13,8 +13,8 @@ This roadmap delivers the v2 update of the MadeByKav app template in four phases
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Update dependencies, schema with declarative RLS, Tailwind v4 migration, and next.config.ts
-- [ ] **Phase 2: Docker & Health Probes** - Dockerfile, docker-compose, dev.sh, and health probe endpoints
-- [ ] **Phase 3: App Code & CI/CD** - Rewrite layout/page/API for auth v0.2.0, add logout action, create CI/CD pipeline
+- [x] **Phase 2: Docker & Health Probes** - Dockerfile, docker-compose, dev.sh, and health probe endpoints
+- [x] **Phase 3: App Code & CI/CD** - Rewrite layout/page/API for auth v0.2.0, add logout action, create CI/CD pipeline
 - [ ] **Phase 4: Documentation** - Rewrite CLAUDE.md, README.md, and generate Toast/Sonner brief
 
 ## Phase Details
@@ -59,11 +59,11 @@ Plans:
   2. page.tsx uses new AuthContext shape (null check, auth.name, auth.email, auth.role, auth.tenantSlug) and displays user identity fields
   3. Logout server action redirects to platform /logout endpoint
   4. GitHub Actions workflow (docker-publish.yml) builds Docker image and pushes to GHCR on push to main, with SHA + latest tags
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
-- [ ] 03-01-PLAN.md -- App code auth v0.2.0 updates (layout, page, logout action)
-- [ ] 03-02-PLAN.md -- API route satisfies pattern and CI/CD Docker publishing workflow
+- [x] 03-01-PLAN.md -- App code auth v0.2.0 updates (layout, page, logout action)
+- [x] 03-02-PLAN.md -- API route satisfies pattern and CI/CD Docker publishing workflow
 
 ### Phase 4: Documentation
 **Goal**: CLAUDE.md and README.md fully reflect the v2 template state so developers and AI assistants have accurate, complete guidance
@@ -87,5 +87,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete    | 2026-02-25 |
 | 2. Docker & Health Probes | 2/2 | Complete | 2026-02-25 |
-| 3. App Code & CI/CD | 0/0 | Not started | - |
+| 3. App Code & CI/CD | 2/2 | Complete | 2026-02-25 |
 | 4. Documentation | 0/0 | Not started | - |

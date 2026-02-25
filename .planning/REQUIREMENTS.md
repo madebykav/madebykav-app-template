@@ -25,9 +25,9 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### App Code
 
-- [ ] **APP-01**: Remove getAuthContext() call from root layout.tsx (forces every page dynamic)
-- [ ] **APP-02**: Update page.tsx to new AuthContext shape (null check, auth.name, auth.email, auth.role, auth.tenantSlug)
-- [ ] **APP-03**: Update API example route with NewExampleItem type usage
+- [x] **APP-01**: Remove getAuthContext() call from root layout.tsx (forces every page dynamic)
+- [x] **APP-02**: Update page.tsx to new AuthContext shape (null check, auth.name, auth.email, auth.role, auth.tenantSlug)
+- [x] **APP-03**: Update API example route with NewExampleItem type usage
 - [x] **APP-04**: Add @source directive to globals.css for Tailwind v4 SDK class scanning
 - [x] **APP-05**: Delete tailwind.config.ts (Tailwind v4 uses CSS-based config)
 
@@ -35,7 +35,7 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 - [x] **HLTH-01**: Create liveness probe at /api/health returning {"status":"ok"}
 - [x] **HLTH-02**: Create readiness probe at /api/health/ready (checks DB with SELECT 1, returns 503 if unreachable)
-- [ ] **AUTH-01**: Create logout server action (redirects to platform /logout endpoint)
+- [x] **AUTH-01**: Create logout server action (redirects to platform /logout endpoint)
 
 ### Docker Infrastructure
 
@@ -46,7 +46,7 @@ Requirements for the v2 template update. Each maps to roadmap phases.
 
 ### CI/CD
 
-- [ ] **CICD-01**: Create GitHub Actions workflow (docker-publish.yml) to build and push Docker image to GHCR on push to main
+- [x] **CICD-01**: Create GitHub Actions workflow (docker-publish.yml) to build and push Docker image to GHCR on push to main
 
 ### Documentation
 
@@ -102,19 +102,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SCHM-01 | Phase 1 | Complete |
 | SCHM-02 | Phase 1 | Complete |
 | SCHM-03 | Phase 1 | Complete |
-| APP-01 | Phase 3 | Pending |
-| APP-02 | Phase 3 | Pending |
-| APP-03 | Phase 3 | Pending |
+| APP-01 | Phase 3 | Complete |
+| APP-02 | Phase 3 | Complete |
+| APP-03 | Phase 3 | Complete |
 | APP-04 | Phase 1 | Complete |
 | APP-05 | Phase 1 | Complete |
 | HLTH-01 | Phase 2 | Complete |
 | HLTH-02 | Phase 2 | Complete |
-| AUTH-01 | Phase 3 | Pending |
+| AUTH-01 | Phase 3 | Complete |
 | DOCK-01 | Phase 2 | Complete |
 | DOCK-02 | Phase 2 | Complete |
 | DOCK-03 | Phase 2 | Complete |
 | DOCK-04 | Phase 2 | Complete |
-| CICD-01 | Phase 3 | Pending |
+| CICD-01 | Phase 3 | Complete |
 | DOCS-01 | Phase 1 | Complete |
 | DOCS-02 | Phase 4 | Pending |
 | DOCS-03 | Phase 4 | Pending |
